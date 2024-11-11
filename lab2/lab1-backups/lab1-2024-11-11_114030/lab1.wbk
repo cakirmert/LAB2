@@ -1,0 +1,104 @@
+{
+  "last_sch_text_sim_command": "",
+  "tabs": [
+    {
+      "analysis": "TRAN",
+      "commands": [
+        ".tran 1u 1m",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 140,
+        "top": 30
+      },
+      "measurements": [
+        {
+          "expr": "MAX V(Net-_C1-Pad2_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "MAX V(Net-_C2-Pad2_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "MIN V(Net-_C2-Pad2_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "MIN V(Net-_C1-Pad2_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "AVG V(Net-_Q1-S_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "AVG V(Net-_Q1-G_)",
+          "format": "3~V"
+        },
+        {
+          "expr": "AVG V(Net-_Q1-D_)",
+          "format": "3~V"
+        }
+      ],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(77, 175, 74)",
+          "signal": "V(Net-_C1-Pad2_)",
+          "trace_type": 257
+        },
+        {
+          "color": "rgb(152, 78, 163)",
+          "signal": "V(Net-_C2-Pad2_)",
+          "trace_type": 257
+        }
+      ]
+    },
+    {
+      "analysis": "AC",
+      "commands": [
+        ".ac dec 100 1 10k",
+        ".kicad adjustpaths",
+        ".save all",
+        ".probe alli",
+        ".probe allp"
+      ],
+      "dottedSecondary": true,
+      "margins": {
+        "bottom": 45,
+        "left": 70,
+        "right": 70,
+        "top": 30
+      },
+      "measurements": [],
+      "showGrid": true,
+      "traces": [
+        {
+          "color": "rgb(55, 126, 184)",
+          "cursor2": {
+            "position": 1012.6156755624328,
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "cursorD": {
+            "x_format": "3~Hz",
+            "y_format": "3~dB"
+          },
+          "signal": "V(Net-_C2-Pad2_) (gain)",
+          "trace_type": 521
+        }
+      ]
+    }
+  ],
+  "user_defined_signals": [
+    "V(Net-_Q1-D_)*I(RL1)"
+  ],
+  "version": 6
+}
